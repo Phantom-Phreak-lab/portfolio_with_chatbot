@@ -3,14 +3,7 @@ import { Calendar, MapPin, Briefcase } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
-    {
-      title: "Data Science Intern",
-      company: "Oasis Infobyte",
-      location: "Remote",
-      period: "September 2025 - Present · 1 month",
-      description: "📄 Internship Highlights: Currently interning as a Data Science Intern. Start Date: 05 September 2025. Duration: 1 month.",
-      skills: ["Data Science"]
-    },
+
     {
       title: "AI and Prompt Engineering Intern",
       company: "Vault of Code",
@@ -18,6 +11,14 @@ const Experience = () => {
       period: "June 2025 - July 2025",
       description: "Learned that effective prompt design is key to getting accurate and creative AI outputs. Understood how different techniques like zero-shot, few-shot, and chain-of-thought prompting impact results. Gained hands-on experience in using prompts to control the AI's behavior more effectively.",
       skills: ["Prompt Engineering", "AI/ML", "Zero-shot Learning", "Few-shot Learning", "Chain-of-thought Prompting"]
+    },
+    {
+      title: "Sports Council President",
+      company: "University of Lucknow",
+      location: "Lucknow, India",
+      period: "2024 - 2026",
+      description: "Organised AAGAAZ- a Multi-Sport, multi-college 5-Day Event, Led the sports council, organizing events and managing team dynamics. Advocated for student welfare and promoted a culture of physical fitness and teamwork.",
+      skills: ["Leadership", "Team Management", "Event Planning", "Communication"]
     },
     {
       title: "Student Coordinator",

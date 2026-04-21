@@ -45,6 +45,22 @@ const Projects = () => {
         "Data cleaning and preprocessing",
         "Insightful storytelling with data"
       ]
+    },
+    {
+      title: "Real-Time Stock Market Intelligence Dashboard",
+      description: "🚀 Built a low-latency, real-time dashboard for tracking and analyzing live stock market data with interactive visualizations and technical insights.",
+      technologies: ["Python", "Streamlit", "Pandas", "Plotly", "yfinance API"],
+      icon: <BarChart3 className="w-8 h-8 text-teal-400" />,
+      github: "https://github.com/Phantom-Phreak-lab",
+      demo: null,
+      features: [
+        "⚡ Live data streaming with auto-refresh",
+        "📊 Interactive charts (candlestick, volume, trends)",
+        "🧠 Technical indicators (MA, RSI)",
+        "🔍 Multi-stock tracking & search",
+        "📈 Clean, responsive dashboard UI",
+        "💡 Enables real-time market analysis and faster data-driven decisions"
+      ]
     }
   ];
 
