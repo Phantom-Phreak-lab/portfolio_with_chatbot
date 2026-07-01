@@ -3,6 +3,14 @@ import { Calendar, MapPin, Briefcase } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
+    {
+      title: "Organizing Head",
+      company: "AAGAAZ 2026 Sports Fest",
+      location: "Lucknow, India",
+      period: "2026",
+      description: "Directed event logistics, registration funnels, and real-time operations for a multi-college sports festival by leading diverse student teams.",
+      skills: ["Event Logistics", "Operations Management", "Team Leadership", "Registration Management", "Communication"]
+    },
 
     {
       title: "AI and Prompt Engineering Intern",

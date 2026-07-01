@@ -4,6 +4,48 @@ import { Github, ExternalLink, Eye, BarChart3, Bot } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
+      title: "Insurance Growth Analytics Platform (Ongoing)",
+      description: "Developing an end-to-end analytics platform for the digital insurance domain focused on customer acquisition, retention performance, and churn-risk forecasting.",
+      technologies: ["Power BI", "SQL", "Excel", "Growth Analytics"],
+      icon: <BarChart3 className="w-8 h-8 text-teal-400" />,
+      github: "",
+      demo: null,
+      features: [
+        "End-to-end growth analytics for acquisition, retention, and churn risk",
+        "Interactive dashboards for campaign performance, cohorts, and lifecycle segments",
+        "Cross-sell opportunity discovery through segment-level performance tracking",
+        "Competitor benchmarking and market trend analysis to optimize acquisition funnels"
+      ]
+    },
+    {
+      title: "Retail Customer Purchase Analytics Dashboard",
+      description: "Built a comprehensive analytics dashboard to monitor purchasing behavior across demographics, regions, and conversion funnel stages.",
+      technologies: ["Power BI", "SQL", "Power Query", "DAX"],
+      icon: <BarChart3 className="w-8 h-8 text-teal-400" />,
+      github: "",
+      demo: null,
+      features: [
+        "Customer behavior analysis across demographic and regional segments",
+        "Conversion funnel tracking with KPI-focused executive reporting",
+        "Row-Level Security (RLS) for controlled insight distribution",
+        "Automated data workflows for regular, seamless performance updates"
+      ]
+    },
+    {
+      title: "University Admissions Analytics Dashboard",
+      description: "Designed admissions dashboards to reveal user demographics and application trends, enabling evidence-based strategy and resource planning.",
+      technologies: ["Power BI", "Excel", "Data Transformation", "Geospatial Analytics"],
+      icon: <BarChart3 className="w-8 h-8 text-teal-400" />,
+      github: "",
+      demo: null,
+      features: [
+        "Advanced transformations including merges, pivots, and conditional logic",
+        "Demographic and application trend visualization for decision support",
+        "Executive geospatial summaries for acquisition strategy planning",
+        "Operational fund allocation insights based on regional demand patterns"
+      ]
+    },
+    {
       title: "AI-Governed Smart City 2070",
       description: "🏙️ An experimental hackathon project (Copilt Jam) simulating how an AI-powered mayor governs a futuristic smart city in the year 2070. Citizens can interact with the mayor to resolve issues, allocate resources, and experience next-gen governance.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "AI Chat"],

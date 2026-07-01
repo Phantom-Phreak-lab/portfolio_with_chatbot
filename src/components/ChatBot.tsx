@@ -4,6 +4,18 @@ import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
 type Cell = 'X' | 'O' | null;
 type RPSChoice = 'rock' | 'paper' | 'scissors';
 
+interface GeminiPart {
+  text?: string;
+}
+
+interface GeminiResponse {
+  candidates?: Array<{
+    content?: {
+      parts?: GeminiPart[];
+    };
+  }>;
+}
+
 const WIN_LINES: number[][] = [
   [0, 1, 2],
   [3, 4, 5],
@@ -107,7 +119,7 @@ const ChatBot = () => {
 
   // Gemini integration
   const GEMINI_MODEL = 'gemini-1.5-flash';
-  const GEMINI_API_KEY = (import.meta as any).env?.VITE_GEMINI_API_KEY as string | undefined;
+  const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY as string | undefined;
 
   const fetchGeminiResponse = async (userText: string): Promise<string> => {
     if (!GEMINI_API_KEY) throw new Error('Missing Gemini API key');
@@ -123,15 +135,20 @@ const ChatBot = () => {
           ]
         }
       ]
-    } as any;
+    };
     const resp = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body)
     });
     if (!resp.ok) throw new Error('Gemini request failed');
-    const data = await resp.json();
-    const text = data?.candidates?.[0]?.content?.parts?.map((p: any) => p?.text).filter(Boolean).join('\n').trim();
+    const data: GeminiResponse = await resp.json();
+    const text =
+      data?.candidates?.[0]?.content?.parts
+        ?.map((part) => part.text)
+        .filter((partText): partText is string => Boolean(partText))
+        .join('\n')
+        .trim() ?? '';
     return text || "I'm here to help! Ask me anything about Aditya's work and experience.";
   };
 
@@ -335,7 +352,7 @@ const ChatBot = () => {
         timestamp: new Date()
       };
       setMessages(prev => [...prev, botMessage]);
-    } catch (error) {
+    } catch {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         text: "I'm having trouble generating a response. Make sure Gemini is configured (VITE_GEMINI_API_KEY).",
